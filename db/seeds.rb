@@ -31,6 +31,18 @@ countries = Country.create(
     {
       country: "Egypt",
       capital: "Cairo"
+    },
+    {
+      country: "France",
+      capital: "Paris"
+    },
+    {
+      country: "Greece",
+      capital: "Athens"
+    },
+    {
+      country: "Iceland",
+      capital: "Reykjavik"
     }
   ]
 )

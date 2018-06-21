@@ -1,13 +1,19 @@
 module Api
   module V1
     class CountriesController < ApplicationController
-      def show
+      def index
         @countries = Country.order('country ASC')
         render json: @countries
       end
 
       def create
         @countries = Country.create(country_params)
+        render json: @countries
+      end
+
+      def update
+        @countries = Country.find(params[:id])
+        @countries.update_attributes(country_params)
         render json: @countries
       end
 

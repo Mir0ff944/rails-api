@@ -19,6 +19,11 @@ module Api
 
       def destroy
         @countries = Country.find(params[:id])
+        if @countries.destroy
+          head :no_content, status: :ok
+        else
+          render json: @countries.errors
+        end
       end
 
       private
